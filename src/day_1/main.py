@@ -1,4 +1,4 @@
-with open("input.txt", "r") as f:
+with open("src/day_1/input.txt", "r") as f:
     input = f.read().split("\n")
 
 
