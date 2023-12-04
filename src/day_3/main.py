@@ -55,7 +55,6 @@ def get_number_at(r: int, c: int) -> Tuple[int, Tuple[int, int]]:
     return int(result), starting_position
 
 
-# Part 1
 def part_1() -> int:
     parts_sum = 0
 
@@ -129,3 +128,11 @@ print(part_1())
 
 print("Part 2")
 print(part_2())
+
+
+class Solution:
+    def __init__(self, input: List[str]) -> None:
+        self.input = input
+        self.rows = len(input)
+        self.cols = len(input[0])
+        pass

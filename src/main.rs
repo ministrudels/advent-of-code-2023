@@ -3,7 +3,7 @@ use std::io::{Error, ErrorKind};
 
 mod day_1;
 mod day_2;
-
+mod day_3;
 fn main() -> Result<(), Error> {
     let args: Vec<String> = env::args().collect();
 
@@ -15,6 +15,7 @@ fn main() -> Result<(), Error> {
     match day {
         "day_1" => day_1::main(),
         "day_2" => day_2::main(),
+        "day_3" => day_3::main(),
         _ => {
             eprintln!("Invalid day: {}", args[1]);
             Err(Error::new(
