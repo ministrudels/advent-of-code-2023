@@ -128,11 +128,3 @@ print(part_1())
 
 print("Part 2")
 print(part_2())
-
-
-class Solution:
-    def __init__(self, input: List[str]) -> None:
-        self.input = input
-        self.rows = len(input)
-        self.cols = len(input[0])
-        pass

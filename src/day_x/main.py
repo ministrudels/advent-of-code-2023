@@ -13,3 +13,10 @@ class Solution:
 
     def part_2(self) -> int:
         return 0
+
+
+solution = Solution(input)
+print("Part 1")
+print(solution.part_1())
+print("Part 2")
+print(solution.part_2())

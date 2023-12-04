@@ -4,6 +4,7 @@ use std::io::{Error, ErrorKind};
 mod day_1;
 mod day_2;
 mod day_3;
+mod day_4;
 mod day_x;
 
 fn main() -> Result<(), Error> {
@@ -19,6 +20,7 @@ fn main() -> Result<(), Error> {
         "day_1" => day_1::main(),
         "day_2" => day_2::main(),
         "day_3" => day_3::main(),
+        "day_4" => day_4::main(),
         _ => {
             eprintln!("Invalid day: {}", args[1]);
             Err(Error::new(
