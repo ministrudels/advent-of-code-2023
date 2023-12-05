@@ -1,6 +1,4 @@
-use std::fs::File;
-use std::io::{self, BufRead};
-use std::path::Path;
+use std::io;
 
 #[allow(dead_code)]
 struct Solution {
@@ -20,12 +18,7 @@ impl Solution {
     }
 }
 
-pub fn main() -> io::Result<()> {
-    let path = Path::new("src/day_x/input.txt");
-    let file = File::open(&path)?;
-    let reader = io::BufReader::new(file);
-    // Read each line and convert it to a Vec<char>
-    let input: Vec<String> = reader.lines().collect::<Result<_, _>>()?;
+pub fn main(input: Vec<String>) -> io::Result<()> {
     let solution = Solution::new(input);
 
     println!("Part 1");
@@ -34,4 +27,25 @@ pub fn main() -> io::Result<()> {
     println!("{:?}", solution.part_2());
 
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::read_input_file;
+
+    use super::*;
+
+    #[test]
+    fn test_part_1() {
+        let input = read_input_file("src/day_x/input_sample.txt").unwrap();
+        let solution = Solution::new(input);
+        assert_eq!(solution.part_1(), 0);
+    }
+
+    #[test]
+    fn test_part_2() {
+        let input = read_input_file("src/day_x/input_sample.txt").unwrap();
+        let solution = Solution::new(input);
+        assert_eq!(solution.part_2(), 0);
+    }
 }
