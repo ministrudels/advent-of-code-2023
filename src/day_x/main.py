@@ -1,4 +1,4 @@
-from typing import Dict, Tuple, Set, List
+from typing import List
 
 with open("src/day_x/input.txt", "r") as f:
     input = f.read().split("\n")

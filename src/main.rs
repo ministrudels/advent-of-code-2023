@@ -7,6 +7,7 @@ mod day_2;
 mod day_3;
 mod day_4;
 mod day_5;
+mod day_6;
 mod day_x;
 
 // utility function to read input files
@@ -31,6 +32,7 @@ fn main() -> Result<(), Error> {
         "day_3" => day_3::main(),
         "day_4" => day_4::main(),
         "day_5" => day_5::main(read_input_file("src/day_5/input.txt").unwrap()),
+        "day_6" => day_6::main(read_input_file("src/day_6/input.txt").unwrap()),
         _ => {
             eprintln!("Invalid day: {}", args[1]);
             Err(Error::new(
