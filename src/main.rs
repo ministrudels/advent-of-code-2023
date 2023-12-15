@@ -3,6 +3,7 @@ use std::io::{BufRead, Error, ErrorKind};
 use std::{env, io};
 
 mod day_1;
+mod day_15;
 mod day_2;
 mod day_3;
 mod day_4;
@@ -37,6 +38,7 @@ fn main() -> Result<(), Error> {
         "day_6" => day_6::main(read_input_file("src/day_6/input.txt").unwrap()),
         "day_8" => day_8::main(read_input_file("src/day_8/input.txt").unwrap()),
         "day_9" => day_9::main(read_input_file("src/day_9/input.txt").unwrap()),
+        "day_15" => day_15::main(read_input_file("src/day_15/input.txt").unwrap()),
         _ => {
             eprintln!("Invalid day: {}", args[1]);
             Err(Error::new(
